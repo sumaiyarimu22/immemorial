@@ -1,13 +1,327 @@
-body {
+/* poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Bai Jamjuree */
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap");
+/* Syncopate */
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+/* Bodoni Moda */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@6400;500;600;700;800;900&display=swap");
+:root {
+  --color-primary: #d53f41;
+  --color-dark: #626262;
+  --color-darker: #464646;
+  --color-light: #dbd8d6;
+  --color-lighter: #f5f0ec;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  background-color: var(--color-lighter);
+}
+.wrapper {
+  margin: 0 5vw;
+}
+section {
+  padding: 8vw 0;
+}
+.section-title {
+  font-family: "syncopate", sans-serif;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  padding-bottom: 5vw;
+  text-transform: lowercase;
+}
+.min-h-100vh {
+  min-height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+  font-family: "syncopate", sans-serif;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+.links,
+.blog-link {
+  font-weight: 700;
+}
+.links a,
+.blog-link a {
+  color: var(--color-dark);
+  position: relative;
+}
+.links a::after,
+.blog-link a::after {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--color-primary);
+  transition: 0.5s;
+}
+.links a:hover:after,
+.blog-link a:hover:after {
+  width: 120%;
+}
+.logo a {
+  color: var(--color-darker);
+}
+.hero {
+  font-family: "Bai Jamjuree", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10vw;
+  line-height: 1.2;
+  min-height: 100vh;
+  color: var(--color-darker);
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.ethereal,
+.canvas {
+  position: relative;
+}
+.ethereal span,
+.canvas span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-lighter);
+}
+.photos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+.photo.one {
+  grid-column: 5;
+  grid-row: 1;
+}
+.photo.two {
+  grid-column: 1;
+  grid-row: 2;
+}
+.photo.three {
+  grid-column: 4;
+  grid-row: 3;
+}
+.photo.four {
+  grid-column: 7;
+  grid-row: 4;
+}
+.photo.five {
+  grid-column: 2;
+  grid-row: 5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.features {
+  display: grid;
+  grid-template-columns: 30% auto;
+  align-items: center;
+  gap: 7rem;
+}
+.features img {
+  width: 100%;
+}
+.feature-l,
+.feature-r {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.feature-text {
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+.feature-shutter-l,
+.feature-shutter-r {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-lighter);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.about p:last-child {
+  margin-top: 3vw;
+}
+.about p {
+  font-size: 3vw;
+  line-height: 1.5;
+  color: var(--color-darker);
+}
+.gallery > .section-title {
+  margin-left: 5vw;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10vw;
+  padding: 10vw;
+  background-color: var(--color-primary);
+}
+.gallery-item {
+  position: relative;
+  width: 50%;
+}
+.gallery-item-title {
+  position: absolute;
+  top: 10%;
+  left: -50%;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 8vw;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-lighter);
+  z-index: 1;
+  mix-blend-mode: color-dodge;
+}
+.gallery-item-category {
+  position: absolute;
+  left: 0;
+  bottom: -6%;
+  text-transform: uppercase;
+  color: var(--color-lighter);
+  letter-spacing: 10px;
+  z-index: 1;
+}
+.gallery-item-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+/* not found */
+.not-found {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: flex-start;
+  column-gap: 5vw;
+  row-gap: 1vw;
+  padding: 5vw 0;
+}
+
+.headline-1,
+.headline-2 {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 8vw;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: capitalize;
+}
+
+.img-1,
+.img-2 {
+  width: 20vw;
+  height: 20vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.img-1 img,
+.img-2 img {
+  display: block;
+  width: 100%;
+}
+
+.img-2 {
+  justify-self: self-end;
+}
+
+.footer {
+  text-align: center;
+}
+.footer h1 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 10vw;
+  text-transform: lowercase;
+  color: var(--color-primary);
+}
+
+.blog-area {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 1rem;
+  grid-auto-flow: dense;
+}
+.blog-image-1 {
+  grid-column: auto / span 3;
+  grid-row: auto / span 2;
+}
+.blog-image-2 {
+  grid-column: auto / span 3;
+}
+.blog-image-3 {
+  grid-column: auto / span 2;
+  grid-row: auto / span 3;
+}
+.blog-image-4 {
+  grid-column: auto / span 3;
+}
+.blog-image-5 {
+  grid-column: auto / span 3;
+}
+.blog-image-6 {
+  grid-column: auto / span 3;
+  grid-row: auto / span 2;
+}
+.blog-image-7 {
+  grid-column: auto / span 6;
 }
