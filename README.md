@@ -10,7 +10,7 @@ npm install
 or
 npm i
 View the app (Hosted on Netlify):
-transcendent-fox-f8e779.netlify.app/
+ transcendent-fox-f8e779.netlify.app/
 
 Tools:
 React.js, React Router, GSAP
