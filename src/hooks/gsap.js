@@ -26,7 +26,7 @@ export const useGsapShutterUnveil = (item, delay = 0, trigger) => {
         },
       }
     );
-  }, []);
+  }, [item, delay, trigger]);
 };
 
 //navbar animation
@@ -50,7 +50,7 @@ export const useGsapDownStagger = (arr, delay = 0) => {
         delay: delay,
       }
     );
-  }, []);
+  }, [arr, delay]);
 };
 
 //hero Image drop animation
@@ -74,7 +74,7 @@ export const useGsapPhotoDropping = (arr) => {
         delay: 2,
       }
     );
-  }, []);
+  }, [arr]);
 };
 
 export const useGsapPhotoLevitate = (arr, trigger) => {
@@ -97,7 +97,7 @@ export const useGsapPhotoLevitate = (arr, trigger) => {
         },
       }
     );
-  }, []);
+  }, [arr, trigger]);
 };
 
 export const useGsapFeatureLeftShutterUnveil = (item, trigger) => {
@@ -120,7 +120,7 @@ export const useGsapFeatureLeftShutterUnveil = (item, trigger) => {
         },
       }
     );
-  }, []);
+  }, [item, trigger]);
 };
 
 export const useGsapFeatureRightShutterUnveil = (item, trigger) => {
@@ -143,7 +143,7 @@ export const useGsapFeatureRightShutterUnveil = (item, trigger) => {
         },
       }
     );
-  }, []);
+  }, [item, trigger]);
 };
 
 export const useGsapGalleryImage = (item) => {
@@ -167,7 +167,7 @@ export const useGsapGalleryImage = (item) => {
         },
       }
     );
-  }, []);
+  }, [item]);
 };
 export const useGsapGalleryTitle = (item, trigger) => {
   useEffect(() => {
@@ -188,7 +188,7 @@ export const useGsapGalleryTitle = (item, trigger) => {
         },
       }
     );
-  }, []);
+  }, [item, trigger]);
 };
 
 export const useGsapGalleryCategory = (item, trigger) => {
@@ -211,7 +211,7 @@ export const useGsapGalleryCategory = (item, trigger) => {
         },
       }
     );
-  }, []);
+  }, [item, trigger]);
 };
 
 export const useFooterHeadLine = (item, trigger) => {
@@ -232,7 +232,7 @@ export const useFooterHeadLine = (item, trigger) => {
         },
       }
     );
-  }, []);
+  }, [item, trigger]);
 };
 
 export const useGsapNotFoundHeadline = (item, vw = "-100vw") => {
@@ -250,7 +250,7 @@ export const useGsapNotFoundHeadline = (item, vw = "-100vw") => {
         ease: Expo.easeInOut,
       }
     );
-  }, []);
+  }, [item, vw]);
 };
 
 export const useGsapNotFoundImg = (item) => {
@@ -271,5 +271,5 @@ export const useGsapNotFoundImg = (item) => {
         ease: "elastic",
       }
     );
-  }, []);
+  }, [item]);
 };

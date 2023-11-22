@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
+// import Navbar from "./components/Navbar";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { useSmoothScroll } from "./hooks/useSmoothScroll";
@@ -16,12 +17,12 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/featured" element={<Featured />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/blog" element={<Blog needFullHight={true} />} />
-        <Route path="*" element={<NotFound needFullHight={true} />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/featured' element={<Featured />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/gallery' element={<Gallery />} />
+        <Route path='/blog' element={<Blog needFullHight={true} />} />
+        <Route path='*' element={<NotFound needFullHight={true} />} />
       </Routes>
       <Footer />
     </div>
