@@ -344,6 +344,7 @@ section {
   .blog-link,
   .phone-menu > li > a {
     color: var(--color-dark);
+    font-weight: bold;
   }
   .photos {
     position: absolute;

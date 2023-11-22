@@ -8,9 +8,20 @@ const Navbar = () => {
   const blogRef = useRef(null);
   const logoRef = useRef(null);
 
+  const lip1 = useRef(null);
+  const lip2 = useRef(null);
+  const lip3 = useRef(null);
+  const pblogRef = useRef(null);
+
+  const liArrp = [lip1, lip2, lip3];
+  const pblogArr = [pblogRef];
+
   const liArr = [li1, li2, li3];
   const blogArr = [blogRef];
   const logoArr = [logoRef];
+
+  useGsapDownStagger(liArrp, 0.9);
+  useGsapDownStagger(pblogArr, 1.9);
 
   useGsapDownStagger(liArr, 0.9);
   useGsapDownStagger(logoArr, 1.5);
@@ -39,16 +50,16 @@ const Navbar = () => {
       </div>
 
       <div className='phone-menu'>
-        <li ref={li1}>
+        <li ref={lip1}>
           <Link to='/Featured'>Featured</Link>
         </li>
-        <li ref={li2}>
+        <li ref={lip2}>
           <Link to='/about'>About</Link>
         </li>
-        <li ref={li3}>
+        <li ref={lip3}>
           <Link to='/gallery'>Gallery</Link>
         </li>
-        <div className='blog-link' ref={blogRef}>
+        <div className='blog-link' ref={pblogRef}>
           <Link to='/blog'>Blog</Link>
         </div>
       </div>
